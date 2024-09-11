@@ -20,5 +20,17 @@ public class OddEvenHelperTest {
     @Test
     void zero() {
         assertEquals(true, OddEvenHelper.isEven(0));
+        assertEquals(false, OddEvenHelper.isOdd(0));
+    }
+    @Test
+    void negOdd(){
+        assertEquals(false, OddEvenHelper.isEven(-7)); 
+        assertEquals(true, OddEvenHelper.isOdd(-7));
+    }
+
+    @Test
+    void negEven(){
+        assertEquals(true, OddEvenHelper.isEven(-4));
+        assertEquals(false, OddEvenHelper.isOdd(-4));
     }
 }
